@@ -7,17 +7,19 @@
 
 	<body>
 		<div id="sheep-pen">
-			<h1 id="title"> Count Sheep, Go to Sleep.com.org.info</h1>
+			<h1 id="title"> Count Sheep, Go to Sleep.com.org.info/index</h1>
 			<img src="sheep.gif" id="sheep"/>
 		</div>
+
+		<button id="fly">Make Sheep Fly</button>
 
 
 
 		<script>
 			// $('body').on("click", "#sheep", flyingSheep);
 
-			$('body').click(function() {
-			  $('#sheep').animate({"left": "+=1400px"}, 10000);
+			$('#fly').click(function() {
+			  $('img').animate({"left": "+=1400px"}, 10000);
 				});
 
 			$("body").on("click", null, createSheep)
@@ -28,11 +30,11 @@
 			function createSheep() {
 
 				var img = $('<img id="sheep">');
-				var i = 0;
+
 				img.attr('src', "sheep.gif");
 				img.appendTo("#sheep-pen");
 				console.log("Added sheep");
-				i++;
+
 			}
 
 
@@ -44,10 +46,3 @@
 	</body>
 </html>
 
-
-
-<!-- $("body").on("click", "a.remove", removeLi); 
-
-function removeLi () {
-	$(this).parent().remove();
-} -->
