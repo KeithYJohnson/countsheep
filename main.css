@@ -1,0 +1,20 @@
+body {
+	background-image: url('space.jpg');
+    background-size: 100% 100%;
+}
+
+body h1 {
+	color: #7df481;
+    font-family: tahoma;
+    letter-spacing: 7	px;
+    border: 2px solid #7df481;
+    padding: 4px;
+    border-radius: 10px;
+    text-shadow: 0 0 15px #7df481;
+}
+
+img {
+  position:absolute;
+  left:50px;
+  
+}
