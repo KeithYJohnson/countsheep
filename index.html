@@ -16,26 +16,23 @@
 
 
 		<script>
-			// $('body').on("click", "#sheep", flyingSheep);
+
 
 			$('#fly').click(function() {
-			  $('img').animate({"left": "+=1400px"}, 10000);
+			  $('img').animate({"left": "+=1400px"}, 1000);
 				});
 
 			$("body").on("click", null, createSheep)
 
-			// function flyingSheep () {
-			// $('#sheep').animate({"left": "+=14000px"}, 100000);
-			// 	});
 			function createSheep() {
 
 				var img = $('<img id="sheep">');
 
 				img.attr('src', "sheep.gif");
-				img.appendTo("#sheep-pen");
+				img.appendTo("#sheep-pen");	
 				console.log("Added sheep");
 
-			}
+			}	
 
 
 		</script>
