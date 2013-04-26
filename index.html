@@ -6,19 +6,48 @@
 	</head>
 
 	<body>
-	<h1 id="title"> Count Sheep, Go to Sleep.com.org.info</h1>
-	<img src="sheep.gif" id="sheep"/>
+		<div id="sheep-pen">
+			<h1 id="title"> Count Sheep, Go to Sleep.com.org.info</h1>
+			<img src="sheep.gif" id="sheep"/>
+		</div>
 
 
 
-	<script>
-		$('body').click(function() {
-		  $('#sheep').animate({"left": "+=14000px"}, "slow");
-			});
-	</script>
+		<script>
+			// $('body').on("click", "#sheep", flyingSheep);
+
+			$('body').click(function() {
+			  $('#sheep').animate({"left": "+=1400px"}, 10000);
+				});
+
+			$("body").on("click", null, createSheep)
+
+			// function flyingSheep () {
+			// $('#sheep').animate({"left": "+=14000px"}, 100000);
+			// 	});
+			function createSheep() {
+
+				var img = $('<img id="sheep">');
+				var i = 0;
+				img.attr('src', "sheep.gif");
+				img.appendTo("#sheep-pen");
+				console.log("Added sheep");
+				i++;
+			}
+
+
+		</script>
 
 
 
 
 	</body>
 </html>
+
+
+
+<!-- $("body").on("click", "a.remove", removeLi); 
+
+function removeLi () {
+	$(this).parent().remove();
+} -->
