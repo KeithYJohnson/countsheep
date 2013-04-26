@@ -17,13 +17,11 @@
 
 
 		<script>
-
-
-			$('#fly').click(function() {
+			$(document).ready(function(){
+				$('#fly').click(function() {
 			  makeSheepFly();
-			  createSheep();
 				});
-
+			});
 
 			function createSheep() {
 
@@ -32,10 +30,12 @@
 				img.attr('src', "sheep.gif");
 				img.appendTo("#sheep-pen");	
 				console.log("Added sheep");
+
 			}	
 
 			function makeSheepFly () {
 				$('img').animate({"left": "+=1400px"}, 10000);
+				createSheep();
 			}
 
 
