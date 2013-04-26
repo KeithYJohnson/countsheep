@@ -18,10 +18,12 @@
 
 		<script>
 			$(document).ready(function(){
-				$('#fly').click(function() {
-			  makeSheepFly();
-				});
+				$('#fly').click(flySheepFly);
 			});
+
+			function flySheepFly() {
+				setInterval(makeSheepFly, 1000);
+			}
 
 			function createSheep() {
 
