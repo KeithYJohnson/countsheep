@@ -39,10 +39,10 @@
 			}	
 
 			function makeSheepFly () {
-				$('img').animate({"left": "+=1400px"}, 10000);
+				var random = Math.random() * (5000 - 15000) + 15000;
+				$('img').animate({"left": "+=1400px"}, random);
 				createSheep();
 			}
-
 
 		</script>
 
