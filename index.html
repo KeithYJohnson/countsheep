@@ -7,25 +7,37 @@
 	</head>
 
 	<body>
-		<div id="sheep-pen">
-			<h1 id="title"> Count Sheep, Go to Sleep.com.org.info/index</h1>
-			<img src="sheep.gif" id="sheep"/>
-		</div>
+		<div ="info" >
 
-		<button id="fly">Make Sheep Fly</button>
-		<button id="stop">Stop Sheep</button>
+			<div id="sheep-pen">
+				<h1 id="title"> Count Sheep, Go to Sleep.com.org.info/index</h1>
+				<img src="sheep.gif" id="sheep"/>
+			</div>
 
 
+
+			<button id="fly">Make Sheep Fly</button><br>
+			<button id="stop">Stop Sheep</button>
+
+	    <div id="counter">0</div>
+
+	  </div>  
+ 
 
 		<script>
 			$(document).ready(function(){
-				$('#stop').click(flySheepFly.stop);
-				$('#fly').click(flySheepFly);
+				// $('#stop').click(stopTimer);	
+				$('#fly').click(flySheepFly);	
+
 			});
 
 			function flySheepFly() {
-				var random = Math.random() * (5000 - 15000) + 15000;
-				timer = setInterval(makeSheepFly, random);
+				// The randon interval needs to be changed, it's only set once.
+				var randominterval = Math.random() * (5000 - 15000) + 15000;
+				console.log(randominterval)
+				timer = setInterval(makeSheepFly, randominterval); 
+				// Making too many timers
+				console.log("hello");
 			}
 
 			function createSheep() {
@@ -33,16 +45,35 @@
 				var img = $('<img id="sheep">');
 
 				img.attr('src', "sheep.gif");
-				img.appendTo("#sheep-pen");	
+				img.appendTo("#sheep-pen");
+				counter = $("#counter");
+				value =  parseInt($("#counter").html());
+				counter.html(++value );
 				console.log("Added sheep");
 
 			}	
 
 			function makeSheepFly () {
-				var random = Math.random() * (5000 - 15000) + 15000;
-				$('img').animate({"left": "+=1400px"}, random);
+				// set the timer here.  
+				var randomspeed = Math.random() * (5000 - 15000) + 15000;
+				var randomY = Math.random() * 900;
+				console.log(randomY)
+				$('img').animate({"left": "+=1400px","top": randomY }, randomspeed);
 				createSheep();
 			}
+
+			// function randomY (min, max) {
+			// 	var nh = Math.floor.random() * (900 - 0) + 0;
+			// }
+
+			// function stopTimer()
+   //    {
+   //      clearInterval(timer);
+   //      delete timer;
+   //      console.log("stop")
+   //    }
+
+
 
 		</script>
 

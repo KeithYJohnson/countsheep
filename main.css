@@ -20,6 +20,16 @@ img {
   top:200px;
   
 }
+/*
+div#info{
+  float:left;
+}*/
+
+/*div{
+  float:left;
+  display: inline-block;
+  margin: 2px 2px 2px 2px;
+}*/
 
 
 button {
@@ -40,6 +50,28 @@ button {
   font-weight: bolder;  
 }
 
+#counter {
+  height: 50px;
+  width: 50px;
+  border: 2px solid #7df481;
+  border-radius: 10px;
+  padding-top: auto;
+  padding-bottom: auto;
+  text-align: center; 
+}
+
+button#stop{
+  color: #d75acc;
+  border: 2px solid #d75acc;
+  text-shadow: 0 0 15px #d75acc;
+}
+
+button#stop:hover{
+      box-shadow: 0 0 40px #d75acc;
+    -webkit-box-shadow: 0 0 40px #d75acc; 
+    -moz-box-shadow: 0 0 40px #d75acc; 
+}
+
 button:hover {
     box-shadow: 0 0 40px #7df481;
     -webkit-box-shadow: 0 0 40px #7df481; 
@@ -50,4 +82,9 @@ body h1:hover {
     box-shadow: 0 0 40px #7df481;
     -webkit-box-shadow: 0 0 40px #7df481; 
     -moz-box-shadow: 0 0 40px #7df481;
+}
+
+#counter {
+  font-size: 20;
+  color: #7df481;
 }
