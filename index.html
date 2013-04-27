@@ -33,10 +33,13 @@
 
 			function flySheepFly() {
 				// The randon interval needs to be changed, it's only set once.
-				var randominterval = Math.random() * (5000 - 15000) + 15000;
-				console.log(randominterval)
-				timer = setInterval(makeSheepFly, randominterval); 
+				// var randominterval = Math.random() * (5000 - 15000) + 15000;
+
+				// console.log(randominterval)
+
 				// Making too many timers
+				timer = setInterval(makeSheepFly, 1000); 
+
 				console.log("hello");
 			}
 
@@ -44,7 +47,12 @@
 
 				var img = $('<img id="sheep">');
 
+				// Random Y
+				var randomStart = Math.random() * 900;				
+
+
 				img.attr('src', "sheep.gif");
+				img.css({top: randomStart})
 				img.appendTo("#sheep-pen");
 				counter = $("#counter");
 				value =  parseInt($("#counter").html());
@@ -54,9 +62,11 @@
 			}	
 
 			function makeSheepFly () {
-				// set the timer here.  
+
+				// Random Number Generators
 				var randomspeed = Math.random() * (5000 - 15000) + 15000;
 				var randomY = Math.random() * 900;
+
 				console.log(randomY)
 				$('img').animate({"left": "+=1400px","top": randomY }, randomspeed);
 				createSheep();
